@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GourMarket - Mercado Autônomo 24h nos Condomínios</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gour-green': '#10B981',
+                        'gour-yellow': '#F59E0B',
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <style>
+        .hero-bg { background: linear-gradient(135deg, #10B981 0%, #059669 100%); }
+        .section-alt { background-color: #f8fafc; }
+        .btn-whatsapp { position: fixed; bottom: 20px; right: 20px; z-index: 1000; }
+        @media (max-width: 768px) { .hero-h1 { font-size: 2rem; } }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+<!-- Header/Topo -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+    <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <!-- Logo base64 do anexo file:24 -->
+        <img src="img/logo.jpg" alt="GourMarket Logo" class="h-12 w-auto">
+        <ul class="hidden md:flex space-x-6">
+            <li><a href="#como-funciona" class="hover:text-gour-green transition">Como Funciona</a></li>
+            <li><a href="#beneficios" class="hover:text-gour-green transition">Benefícios</a></li>
+            <li><a href="#indicacao" class="hover:text-gour-green font-bold text-gour-green">Quero Contratar</a></li>
+        </ul>
+        <button onclick="scrollToSection('indicacao')" class="md:hidden bg-gour-green text-white px-6 py-2 rounded-lg">Quero Contratar</button>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section id="hero" class="hero-bg text-white py-20">
+    <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 hero-h1">Mercado Autônomo 24h no Seu Condomínio</h1>
+        <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Tudo que você precisa, literalmente a um passo. Comodidade inteligente que valoriza o seu condomínio com tecnologia de ponta e praticidade 24/7.</p>
+        <div class="space-x-4">
+           <a href="#indicacao" onclick="scrollToScrollToSection('indicacao')" class="border-2 border-white px-8 py-4 rounded-lg font-bold text-lg inline-block hover:bg-white hover:text-gour-green transition">Quero Contratar</a>
+            <a href="https://wa.me/2731901686" class="border-2 border-white px-8 py-4 rounded-lg font-bold text-lg inline-block hover:bg-white hover:text-gour-green transition">Fale pelo WhatsApp</a>
+        </div>
+    </div>
+</section>
+
+<!-- Como Funciona -->
+<section id="como-funciona" class="py-20 section-alt">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-16 text-gray-800">Como Funciona</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="text-center">
+                <div class="w-20 h-20 bg-gour-green rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl">1</div>
+                <h3 class="text-xl font-bold mb-4">Planejamento Inicial</h3>
+                <p>Reunião com síndico, projeto personalizado e visualização prévia.</p>
+            </div>
+            <div class="text-center">
+                <div class="w-20 h-20 bg-gour-green rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl">2</div>
+                <h3 class="text-xl font-bold mb-4">Instalação</h3>
+                <p>Logística completa, elétrica especializada e comunicação visual em até 60 dias.</p>
+            </div>
+            <div class="text-center">
+                <div class="w-20 h-20 bg-gour-green rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl">3</div>
+                <h3 class="text-xl font-bold mb-4">Inauguração</h3>
+                <p>Câmeras de segurança, abastecimento e parceria com % do faturamento para o condomínio.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Benefícios -->
+<section id="beneficios" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-16 text-gray-800">Benefícios para o Condomínio</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-section-alt p-6 rounded-xl shadow-lg">
+                <h3 class="text-xl font-bold mb-4 text-gour-green">24h por 7 Dias</h3>
+                <p>Praticidade total, ofertas imperdíveis e autoatendimento.</p>
+            </div>
+            <div class="bg-section-alt p-6 rounded-xl shadow-lg">
+                <h3 class="text-xl font-bold mb-4 text-gour-green">Receita Adicional</h3>
+                <p>3-5% do faturamento bruto para investimentos no condomínio.</p>
+            </div>
+            <div class="bg-section-alt p-6 rounded-xl shadow-lg">
+                <h3 class="text-xl font-bold mb-4 text-gour-green">Segurança</h3>
+                <p>Monitoramento reforçado e armários sob medida.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Galeria de Fotos (placeholders do wireframe) -->
+<section class="py-20 section-alt">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Nossos Mercados em Ação</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <img src="img/espaco_interno.jpg" alt="Mercado GourMarket" class="w-full h-48 object-cover rounded-lg shadow-md">
+            <img src="img/mercado.png" alt="Autoatendimento" class="w-full h-48 object-cover rounded-lg shadow-md">
+            <img src="img/produtos.jpg" alt="Produtos" class="w-full h-48 object-cover rounded-lg shadow-md">
+            <img src="img/espaco_interno.jpg" alt="Condomínio" class="w-full h-48 object-cover rounded-lg shadow-md">
+            <!-- Adicione mais 4 imagens reais depois -->
+        </div>
+    </div>
+</section>
+
+<!-- Mapa (endereço genérico ES, ajuste com real do PDF se tiver) -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-8 text-gray-800">Encontre-nos</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14964.734268411481!2d-40.29721643417698!3d-20.334033927763045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb81648d2ab294b%3A0x66dfd80cf5e235b2!2sConvento%20da%20Penha%20-%20Vila%20Velha%2C%20ES%2C%2029100-041!5e0!3m2!1spt-BR!2sbr!4v1768932685648!5m2!1spt-BR!2sbr" width="100%" height="400" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy"></iframe>
+        <p class="mt-4 text-gray-600">Vila Velha, Espírito Santo - Transformando condomínios por todo ES</p>
+    </div>
+</section>
+
+<!-- Indicação/Contato -->
+<section id="indicacao" class="py-20 section-alt">
+    <div class="container mx-auto px-4 max-w-4xl">
+        <h2 class="text-3xl font-bold text-center mb-16 text-gray-800">Indique Seu Condomínio</h2>
+        <div class="grid place-items-center">  <!-- Grid centralizado único -->
+            <form id="indicacaoForm" class="w-full max-w-md space-y-4 shadow-2xl p-8 bg-white rounded-2xl border border-gray-100">
+                <input type="text" id="nome" placeholder="Seu Nome *" required class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gour-green focus:border-transparent transition-all">
+                <input type="text" id="condominio" placeholder="Nome do Condomínio *" required class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gour-green focus:border-transparent transition-all">
+                <input type="email" id="email" placeholder="Seu Email *" required class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gour-green focus:border-transparent transition-all">
+                <input type="tel" id="telefone" placeholder="Seu Telefone/WhatsApp *" required class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gour-green focus:border-transparent transition-all">
+                <textarea id="endereco" placeholder="Endereço do Condomínio *" rows="3" required class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gour-green focus:border-transparent transition-all"></textarea>
+                <button type="submit" class="w-full bg-gour-green text-white py-4 px-6 rounded-xl font-bold text-lg hover:bg-green-700 transition-all transform hover:scale-105 shadow-lg border-0">Enviar Indicação</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+<!-- Rodapé -->
+<footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4 text-center">
+        <img src="img/logo.jpg">
+        <p>&copy; 2026 GourMarket. Mercado Autônomo 24h. (27) 3190-1686</p>
+    </div>
+</footer>
+
+<!-- Botão Fixo WhatsApp -->
+<a href="https://wa.me/2731901686?text=Olá GourMarket! Gostaria de mais infos sobre instalação no meu condomínio." class="btn-whatsapp bg-gour-green text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition w-16 h-16 flex items-center justify-center text-2xl" target="_blank">
+    <svg fill="currentColor" viewBox="0 0 24 24" class="w-8 h-8"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/></svg>
+</a>
+
+<script>
+    function scrollToSection(id) {
+        document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // EmailJS - Cadastre-se grátis em emailjs.com, substitua SERVICE_ID, TEMPLATE_ID, USER_ID
+    emailjs.init("YOUR_USER_ID"); // Substitua
+    document.getElementById('indicacaoForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+            nome: document.getElementById('nome').value,
+            condominio: document.getElementById('condominio').value,
+            email: document.getElementById('email').value,
+            telefone: document.getElementById('telefone').value,
+            endereco: document.getElementById('endereco').value
+        }).then(() => {
+            alert('Indicação enviada! Entraremos em contato.');
+            this.reset();
+        }, () => alert('Erro no envio. Use WhatsApp.'));
+    });
+</script>
+
+</body>
+</html>
