@@ -1,0 +1,27 @@
+/* estilo.css – estilos próprios do projeto */
+
+.hero-bg {
+    background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+}
+
+.section-alt {
+    background-color: #f8fafc;
+}
+
+.btn-whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    .hero-h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Opcional: pequenos refinamentos visuais */
+.bg-section-alt {
+    background-color: #f8fafc;
+}
